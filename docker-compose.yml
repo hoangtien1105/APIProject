@@ -1,6 +1,6 @@
 services:
   apiproject:
-    image: ${DOCKER_REGISTRY-}apiproject
+    image: hmtken/api-project
     build:
       context: .
       dockerfile: APIProject/Dockerfile
