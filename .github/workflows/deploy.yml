@@ -44,12 +44,13 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd api-project-container
+            cd ~/api-project-container
             # Download the latest docker-compose.yml correctly
             curl -H "Accept: application/vnd.github.v3.raw" \
                  -o docker-compose.yml \
                  https://raw.githubusercontent.com/hoangtien1105/APIProject/main/docker-compose.yml
 
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/api-project:latest
             docker compose down --remove-orphans
             docker compose up -d --force-recreate
             docker logs apiproject
