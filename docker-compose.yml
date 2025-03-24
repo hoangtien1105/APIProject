@@ -1,5 +1,5 @@
 services:
-  apiproject:
+  api-project-container:
     image: hmtken/api-project
     ports: 
     - "8080:8080"
