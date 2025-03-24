@@ -50,7 +50,6 @@ jobs:
                  -o docker-compose.yml \
                  https://raw.githubusercontent.com/hoangtien1105/APIProject/main/docker-compose.yml
 
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/api-project:latest
             docker compose down --remove-orphans
             docker compose up -d --force-recreate
             docker logs apiproject
