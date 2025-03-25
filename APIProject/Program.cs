@@ -15,11 +15,11 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 //Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment()) // mat day thang nao code default cai dong nay day
-{
+//if (app.Environment.IsDevelopment()) // mat day thang nao code default cai dong nay day
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 
 app.UseAuthorization();
