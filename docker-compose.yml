@@ -1,6 +1,7 @@
 services:
   api-project-container:
     image: hmtken/api-project
+    container_name: api-project-container
     ports: 
     - "8080:8080"
     build:
