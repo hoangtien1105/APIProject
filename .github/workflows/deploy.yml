@@ -53,4 +53,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/api-project:latest
             docker compose down --remove-orphans
             docker compose up -d --force-recreate
-            docker logs apiproject
+            docker logs api-project-container
